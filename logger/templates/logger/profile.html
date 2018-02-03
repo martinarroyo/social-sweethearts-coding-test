@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hi!</title>
 </head>
 <body>
-
+<p>Hi {{ user.username }}!</p>
+<img src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
+<a href="{% url 'account_logout' %}">Log out</a>
 </body>
 </html>
