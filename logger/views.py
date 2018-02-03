@@ -1,5 +1,5 @@
-from django.http import HttpResponseRedirect
-from django.views.generic import TemplateView
+from django.http import HttpResponseRedirect, HttpResponse
+from django.views.generic import TemplateView, View
 from django.urls import reverse
 
 
@@ -14,3 +14,10 @@ class IndexView(TemplateView):
 
 class ProfileView(TemplateView):
     template_name = 'logger/profile.html'
+
+
+class DeactivateView(View):
+
+    def post(self, request, *args, **kwargs):
+
+        return HttpResponse(status=200)
