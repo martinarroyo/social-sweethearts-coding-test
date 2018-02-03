@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% load socialaccount %}
+{% providers_media_js %}
+
+{% load account %}
+
+{% user_display user %}
+
+<img src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
+<a href="{% provider_login_url "facebook" method="js_sdk" %}">Facebook Connect</a>
