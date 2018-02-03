@@ -63,6 +63,5 @@ class DeauthorizeView(View):
 
         social_account.user.is_active = False
         social_account.user.save()
-        social_account.delete()
 
         return HttpResponse(status=200)
