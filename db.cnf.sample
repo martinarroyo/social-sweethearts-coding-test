@@ -1,0 +1,6 @@
+[client]
+database = social_sweethearts
+user = 
+password = 
+default-character-set = utf8
+

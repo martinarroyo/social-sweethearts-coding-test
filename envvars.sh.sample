@@ -1,0 +1,4 @@
+DJANGO_SETTINGS_MODULE = 'testproject.settings.prod'
+SOCIAL_SWEETHEARTS_SECRET_KEY = ''
+SOCIAL_SWEETHEARTS_DB_CONF = 'db.cnf'
+
