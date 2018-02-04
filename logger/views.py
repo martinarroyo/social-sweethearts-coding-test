@@ -19,12 +19,24 @@ class IndexView(TemplateView):
 class ProfileView(TemplateView):
     template_name = 'logger/profile.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.request.user
+        if not user.socialaccount_set.count():
+            context['user_name'] = user.username
+            return context
+
+        socialaccount = user.socialaccount_set.first()
+        facebook_data = socialaccount.extra_data
+
+        context['user_name'] = facebook_data['name']
+        return context
+
 
 class DeauthorizeView(View):
 
     def post(self, request, *args, **kwargs):
         try:
-            # TODO: KeyError
             signed_request = request.POST['signed_request']
             encoded_sig, payload = signed_request.split('.')
         except (ValueError, KeyError):
