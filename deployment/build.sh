@@ -6,10 +6,10 @@ virtualenv -p python3.6 env
 fi
 
 source env/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-prod.txt
 
 source envvars.sh 
 
 python manage.py migrate
-python manage.py collectstatic --yes
+python manage.py collectstatic --noinput
 

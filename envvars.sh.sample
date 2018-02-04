@@ -1,4 +1,5 @@
-DJANGO_SETTINGS_MODULE = 'testproject.settings.prod'
-SOCIAL_SWEETHEARTS_SECRET_KEY = ''
-SOCIAL_SWEETHEARTS_DB_CONF = 'db.cnf'
+export DJANGO_SETTINGS_MODULE='testproject.settings.prod'
+export DJANGO_WSGI_MODULE=testproject.wsgi
+export SOCIAL_SWEETHEARTS_SECRET_KEY=''
+export SOCIAL_SWEETHEARTS_DB_CONF='my.cnf'
 
