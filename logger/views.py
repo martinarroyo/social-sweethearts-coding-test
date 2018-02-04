@@ -23,7 +23,6 @@ class ProfileView(TemplateView):
 class DeauthorizeView(View):
 
     def post(self, request, *args, **kwargs):
-        import pdb; pdb.set_trace()
         try:
             # TODO: KeyError
             signed_request = request.POST['signed_request']
