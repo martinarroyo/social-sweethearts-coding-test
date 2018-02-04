@@ -2,6 +2,8 @@
 
 A simple Django app with Facebook Login integration.
 
+The codebase is build using Django 2.0, [django-allauth](https://django-allauth.readthedocs.io/) and Python 3.6.
+
 ## Development setup:
 
 * Edit the `deployment/fixtures.json` and fill the missing private keys.
