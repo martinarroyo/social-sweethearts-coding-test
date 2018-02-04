@@ -1,5 +1,5 @@
+export HTTPS=1
 export DJANGO_SETTINGS_MODULE='testproject.settings.prod'
 export DJANGO_WSGI_MODULE=testproject.wsgi
 export SOCIAL_SWEETHEARTS_SECRET_KEY=''
 export SOCIAL_SWEETHEARTS_DB_CONF='my.cnf'
-

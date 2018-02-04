@@ -1,5 +1,5 @@
 #!/bin/bash
-# You need to create the envvars.sh file before running this script!
+# You need to create the envvars.sh and my.cnf files before running this script, as well as filling the missing fields in deployment/fixtures.json!
 
 if [ ! -d "env" ]; then
 virtualenv -p python3.6 env
@@ -12,4 +12,4 @@ source envvars.sh
 
 python manage.py migrate
 python manage.py collectstatic --noinput
-
+python manage.py loaddata deployment/fixtures.json
